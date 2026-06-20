@@ -13,8 +13,8 @@ Personal [Raycast](https://raycast.com) extensions by Andrew Horbach.
 Extensions in this repo are not published to the Raycast Store — install them locally:
 
 ```bash
-git clone https://github.com/andrewhorbach/horbach-raycast
-cd horbach-raycast/extensions/<extension-name>
+git clone https://github.com/andrewhorbach/raycast
+cd raycast/extensions/<extension-name>
 npm install
 ```
 
