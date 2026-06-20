@@ -1,7 +1,15 @@
 import { PDFDocument } from "pdf-lib";
 import * as fs from "fs";
 import * as path from "path";
+import * as os from "os";
 import { framePath, FrameMeta } from "./frames";
+
+export function framesPdfPath(): string {
+  const now = new Date();
+  const date = now.toISOString().slice(0, 10);
+  const time = now.toTimeString().slice(0, 8).replace(/:/g, "");
+  return path.join(os.homedir(), "Desktop", `frames-${date}-${time}.pdf`);
+}
 
 export async function framesPdf(frames: FrameMeta[], outputPath: string): Promise<void> {
   const doc = await PDFDocument.create();

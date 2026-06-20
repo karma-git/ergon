@@ -1,9 +1,8 @@
 import { List, Action, ActionPanel, Icon, Alert, confirmAlert, showToast, Toast, showHUD, open } from "@raycast/api";
 import { useState, useEffect, useCallback } from "react";
 import * as path from "path";
-import * as os from "os";
 import { getFrames, deleteFrame, moveFrame, clearFrames, framePath, FrameMeta } from "./lib/frames";
-import { framesPdf } from "./lib/pdf";
+import { framesPdf, framesPdfPath } from "./lib/pdf";
 
 export default function Command() {
   const [frames, setFrames] = useState<FrameMeta[]>([]);
@@ -31,8 +30,7 @@ export default function Command() {
 
   async function handleGenerate() {
     if (!frames.length) { await showHUD("⚠️ No frames to export"); return; }
-    const date = new Date().toISOString().slice(0, 10);
-    const outputPath = path.join(os.homedir(), "Desktop", `frames-${date}.pdf`);
+    const outputPath = framesPdfPath();
     const toast = await showToast({
       style: Toast.Style.Animated,
       title: "Generating PDF…",

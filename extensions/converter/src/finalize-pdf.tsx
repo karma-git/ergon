@@ -1,8 +1,7 @@
 import { showHUD, showToast, Toast, open } from "@raycast/api";
 import * as path from "path";
-import * as os from "os";
 import { getFrames, clearFrames } from "./lib/frames";
-import { framesPdf } from "./lib/pdf";
+import { framesPdf, framesPdfPath } from "./lib/pdf";
 
 export default async function Command() {
   const frames = await getFrames();
@@ -11,8 +10,7 @@ export default async function Command() {
     return;
   }
 
-  const date = new Date().toISOString().slice(0, 10);
-  const outputPath = path.join(os.homedir(), "Desktop", `frames-${date}.pdf`);
+  const outputPath = framesPdfPath();
 
   const toast = await showToast({
     style: Toast.Style.Animated,

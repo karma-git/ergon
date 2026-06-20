@@ -37,6 +37,13 @@
       "mode": "no-view"
     },
     {
+      "name": "capture-frame",
+      "title": "Capture Frame",
+      "subtitle": "Frames → PDF",
+      "description": "Take a screenshot selection and add to PDF queue — works with browser videos",
+      "mode": "no-view"
+    },
+    {
       "name": "view-queue",
       "title": "View Frames",
       "subtitle": "Frames → PDF",
