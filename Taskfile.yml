@@ -7,13 +7,11 @@ tasks:
   install:
     desc: Install dependencies for all extensions
     cmds:
-      - npm install --prefix extensions/clipboard-to-pdf
       - npm install --prefix extensions/converter
 
   build:
     desc: Build all extensions
     cmds:
-      - npm run build --prefix extensions/clipboard-to-pdf
       - npm run build --prefix extensions/converter
 
   dev:

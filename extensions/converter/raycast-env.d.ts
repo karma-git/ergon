@@ -19,6 +19,16 @@ declare namespace Preferences {
   export type HeicToJpg = ExtensionPreferences & {}
   /** Preferences accessible in the `pdf-merge` command */
   export type PdfMerge = ExtensionPreferences & {}
+  /** Preferences accessible in the `split-pdf` command */
+  export type SplitPdf = ExtensionPreferences & {}
+  /** Preferences accessible in the `extract-pages` command */
+  export type ExtractPages = ExtensionPreferences & {}
+  /** Preferences accessible in the `rotate-pdf` command */
+  export type RotatePdf = ExtensionPreferences & {}
+  /** Preferences accessible in the `pdf-to-images` command */
+  export type PdfToImages = ExtensionPreferences & {}
+  /** Preferences accessible in the `compress-pdf` command */
+  export type CompressPdf = ExtensionPreferences & {}
   /** Preferences accessible in the `add-frame` command */
   export type AddFrame = ExtensionPreferences & {}
   /** Preferences accessible in the `capture-frame` command */
@@ -36,6 +46,16 @@ declare namespace Arguments {
   export type HeicToJpg = {}
   /** Arguments passed to the `pdf-merge` command */
   export type PdfMerge = {}
+  /** Arguments passed to the `split-pdf` command */
+  export type SplitPdf = {}
+  /** Arguments passed to the `extract-pages` command */
+  export type ExtractPages = {}
+  /** Arguments passed to the `rotate-pdf` command */
+  export type RotatePdf = {}
+  /** Arguments passed to the `pdf-to-images` command */
+  export type PdfToImages = {}
+  /** Arguments passed to the `compress-pdf` command */
+  export type CompressPdf = {}
   /** Arguments passed to the `add-frame` command */
   export type AddFrame = {}
   /** Arguments passed to the `capture-frame` command */
